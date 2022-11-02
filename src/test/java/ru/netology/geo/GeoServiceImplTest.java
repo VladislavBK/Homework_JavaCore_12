@@ -1,11 +1,13 @@
+package ru.netology.geo;
+
 import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.Test;
+import org.testng.annotations.Test;
 import ru.netology.entity.Country;
 import ru.netology.entity.Location;
 import ru.netology.geo.GeoServiceImpl;
 
 public class GeoServiceImplTest {
-    @Test
+    @org.testng.annotations.Test
     public void byIp_Moscow_Success () {
         GeoServiceImpl geoService = new GeoServiceImpl();
         Location expected = new Location("Moscow", Country.RUSSIA, "Lenina", 15);
@@ -14,7 +16,7 @@ public class GeoServiceImplTest {
         Assertions.assertEquals(expected, argument);
     }
 
-    @Test
+    @org.testng.annotations.Test
     public void byIp_NewYork_Success () {
         GeoServiceImpl geoService = new GeoServiceImpl();
         Location expected = new Location("New York", Country.USA, " 10th Avenue", 32);
@@ -23,7 +25,7 @@ public class GeoServiceImplTest {
         Assertions.assertEquals(expected, argument);
     }
 
-    @Test
+    @org.testng.annotations.Test
     public void byIp_StartWithMoscow_Success () {
         GeoServiceImpl geoService = new GeoServiceImpl();
         Location expected = new Location("Moscow", Country.RUSSIA, "Lenina", 15);
@@ -32,7 +34,7 @@ public class GeoServiceImplTest {
         Assertions.assertEquals(expected, argument);
     }
 
-    @Test
+    @org.testng.annotations.Test
     public void byIp_StartWithNewYork_Success () {
         GeoServiceImpl geoService = new GeoServiceImpl();
         Location expected = new Location("New York", Country.USA, " 10th Avenue", 32);
